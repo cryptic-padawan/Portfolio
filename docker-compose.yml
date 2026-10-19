@@ -1,0 +1,14 @@
+# Portfolio-only Redis — host 6392 (do not use 6379/6380; other stacks on this machine).
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: arcanum-portfolio-redis
+    command: redis-server --appendonly yes
+    ports:
+      - "127.0.0.1:6392:6379"
+    volumes:
+      - arcanum_redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  arcanum_redis_data:

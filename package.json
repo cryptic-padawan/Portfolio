@@ -1,0 +1,38 @@
+{
+  "name": "arcanum-portfolio",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @arcanum/web",
+    "dev:clean": "node scripts/start-dev.mjs",
+    "build": "npm run build -w @arcanum/web",
+    "start": "npm run start -w @arcanum/web",
+    "lint": "npm run lint -w @arcanum/web",
+    "redis:up": "docker compose up -d redis",
+    "redis:down": "docker compose down",
+    "postinstall": "node scripts/dedupe-workspace-react.mjs",
+    "vercel:login": "vercel login",
+    "vercel:link": "vercel link --yes --scope team_i2xEk3P8JoAYTVqvoT3Bc7rf --project arcanum-portfolio",
+    "vercel:deploy": "vercel --yes --scope team_i2xEk3P8JoAYTVqvoT3Bc7rf",
+    "vercel:prod": "vercel --prod --yes --scope team_i2xEk3P8JoAYTVqvoT3Bc7rf"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "overrides": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "@types/react": "19.0.4",
+    "@types/react-dom": "19.0.2"
+  },
+  "devDependencies": {
+    "vercel": "64.5.0"
+  }
+}

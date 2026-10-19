@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+dist/
+.env
+.env.local
+apps/web/.env.local
+config/personal-github.repo
+.env*.local
+*.log
+.DS_Store
+Thumbs.db
+.vercel
+apps/web/.vercel
