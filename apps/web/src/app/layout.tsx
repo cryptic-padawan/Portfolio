@@ -4,6 +4,7 @@ import "./globals.css";
 import { AudioConsentGate } from "@/components/ui/AudioConsentGate";
 import { AmbientAudio } from "@/components/audio/AmbientAudio";
 import { DeviceTierProvider } from "@/components/providers/DeviceTierProvider";
+import { Analytics } from "@vercel/analytics/next"
 
 const display = Cinzel({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
           <AmbientAudio />
           {children}
         </DeviceTierProvider>
+        <Analytics />
       </body>
     </html>
   );
