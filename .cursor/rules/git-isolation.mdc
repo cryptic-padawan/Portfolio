@@ -1,0 +1,11 @@
+---
+description: Personal portfolio — never touch global git or work credentials
+alwaysApply: true
+---
+
+# Git / account isolation
+
+- **Never** run `git config --global` or change system-wide SSH, npm global, or Cursor account settings for this user.
+- **Only** `git config --local` inside `C:\Users\sahil.verma\Desktop\Project` (personal: Sahil Verma, sahilverma0433@gmail.com, GitHub **cryptic-padawan**).
+- Work repos on this machine must keep using work identity; personal GitHub remotes use repo-local remote URL + personal PAT or `github.com-personal` SSH alias (see `docs/GIT-AND-ACCOUNTS.md`).
+- Vercel: deploy with project npm scripts (`--scope team_i2xEk3P8JoAYTVqvoT3Bc7rf`); CLI login email may be Google — OK for Vercel account.

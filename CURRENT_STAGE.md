@@ -2,7 +2,7 @@
 
 > **Agent rule:** Read this file first each session. Update **Changelog** + **Next actions** when work completes. Do not re-scan the whole repo unless this file says a path changed structurally.
 
-**Last updated:** 2026-10-17 (single-island POI + minimap teleport)  
+**Last updated:** 2026-10-19 (realm trees, fruit interaction, profile glass HUD)  
 **Phase:** 1 — Local dev running; Vercel wired (account + login required to deploy)  
 **World title (public):** *Archipelago of Arcanum* (fantasy MMORPG-inspired; **no** Warner/HP trademarks in UI or code)
 
@@ -111,6 +111,11 @@ Commands: `npm run redis:up` / `npm run redis:down` from repo root.
 |-----------|------|--------|
 | `ArcanumIsland` | `components/world/ArcanumIsland.tsx` + `island/*` | ✅ expanded grass island (r≈38), central stone hub, radial paths, sway trees, wind grass |
 | `Minimap` | `components/ui/Minimap.tsx` | ✅ realm chart teleport + live player dot |
+| `CharacterProfileHud` | `components/ui/CharacterProfileHud.tsx` | ✅ P-key realm file; glass panel left of minimap; island stays interactive |
+| `RealmTree` / `IslandTrees` | `components/world/island/` | ✅ MMO-style canopy + green outline when near; ~14 fruit trees |
+| `FruitTreeWorldPrompt` | `components/world/FruitTreeWorldPrompt.tsx` | ✅ Eat fruit UI anchored near tree, billboard to camera |
+| `FruitProximitySystem` | `components/world/FruitProximitySystem.tsx` | ✅ near-tree detection + consume tick |
+| `ProficiencyAchievementFloater` | `components/world/ProficiencyAchievementFloater.tsx` | ✅ rising XP toast above avatar with fade phases |
 | `PlayerAvatar` / `HumanoidAvatar` | `components/world/` | ✅ WASD/arrows walk, Shift run; `public/models/realm-soldier.glb` (three.js Soldier, Idle/Walk/Run) |
 | `CameraDirector` | `components/world/CameraDirector.tsx` | ✅ third-person follow, drag to orbit |
 | `islandRuntime` | `lib/islandRuntime.ts` | ✅ keyboard input + live avatar XZ |
@@ -172,6 +177,15 @@ PORTFOLIO_REDIS_URL=redis://127.0.0.1:6392/0
 | 2026-10-19 | **Paths & grass v2:** six `CobblestoneSpoke` (packed stones + curbs) hub→each POI; `InteractiveGrassField` instanced blades with wind + bend when avatar walks through (R3F, no Unity) |
 | 2026-10-19 | **Paths & grass v3:** path beds use quaternion-aligned boxes (all 6 spokes); dense flat flagstone collage; `CobblestoneHub` stone plaza; grass clusters (~5× blades per cell) + tone variation |
 | 2026-10-19 | **Pavement & perf:** `isOnPavement` strips grass from hub/paths; jigsaw extruded stones; grass LOD (near player/camera full, far hazy/hidden) + tier scaling; lighter grass; avatar 1.38× |
+| 2026-10-19 | **Character profile HUD:** removed 3D `CharacterProfileAnchor`; `CharacterProfileHud` beside Realm beacons (top-right); P / Esc / ✕ unchanged |
+| 2026-10-19 | **Profile polish:** larger glass card (`arcane-night/88`), rounded/hazy border, no scrollbars |
+| 2026-10-19 | **Knowledge fruit:** `RealmTree` + eat flow, circular progress, proficiency toast from `resume.json` skills |
+| 2026-10-19 | **Fruit polish:** canopy/branches/roots; fruit in leaves; 2D interaction HUD; hand-attached prop; opaque XP toast |
+| 2026-10-19 | **Island streaming:** trees/grass/rocks/paths/altars load in ~20–28m bubble around avatar; fog tightened; collision matches bubble |
+| 2026-10-19 | **Torches & night:** medieval stands on path/hub/POI edges; **N** toggles night (Sky/Stars/dim scene); streamed torch flames + navigator light |
+| 2026-10-19 | **Night perf:** fewer/wider torches; camera-weighted stream + instant off-screen flame snap; phased ignite/extinguish budgets; circular fairy sparkles; ground-anchored navigator column |
+| 2026-10-19 | **Night v2:** alternating path torches @6m; staggered N transition (sky→scenery→fog→torches); 8 camera sectors |
+| 2026-10-19 | **Night v3:** torches always lit when mounted; no flame sim; stream-radius cull only (camera wedge reverted); fewer/brighter fairy dust |
 
 ---
 

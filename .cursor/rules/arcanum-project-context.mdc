@@ -1,0 +1,14 @@
+---
+description: Archipelago portfolio — always read stage file and stay project-local
+alwaysApply: true
+---
+
+# Arcanum portfolio (this folder only)
+
+1. **First step every session:** Read `CURRENT_STAGE.md` at the repo root for phase, ports, contacts, and next actions.
+2. **Scope:** Work only inside this `Project` tree. Do not change sibling repos on Desktop (OmniStudio, Micro-complete, etc.).
+3. **Dependencies:** Run `npm install` only from this repo root. Do not install global packages or alter other projects' `node_modules`.
+4. **Ports:** Dev server **3920**; Redis **6392** (never 6379/6380 on this machine).
+5. **Legal:** No Harry Potter / Hogwarts trademarks in UI, copy, or identifiers. Use Arcanum / fantasy-original naming.
+6. **After meaningful changes:** Update `CURRENT_STAGE.md` §4 repo map, §6 components, §8–§9 changelog — do not rescan the whole repo unless structure changed.
+7. **Local preview:** Dev URL is http://localhost:3920 — after code changes, restart dev if HMR is insufficient: free port 3920 then `npm run dev` (background).

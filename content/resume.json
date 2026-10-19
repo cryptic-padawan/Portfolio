@@ -1,0 +1,78 @@
+{
+  "name": "Sahil Verma",
+  "title": "Senior Full-Stack Developer",
+  "location": "Delhi, India",
+  "email": "sahilverma0433@gmail.com",
+  "phone": "+91-8368410581",
+  "links": {
+    "github": "https://github.com/cryptic-padawan",
+    "linkedin": "https://www.linkedin.com/in/sahilverma0433",
+    "discord": ".sahilverma"
+  },
+  "summary": "Senior Full-Stack Developer with 2.5+ years of experience building scalable micro-frontend, AI-powered, and enterprise web applications using React.js, TypeScript, Node.js, and Microsoft Fabric. Experienced in distributed systems, REST APIs, ETL pipelines, performance optimization, and leading high-impact enterprise projects.",
+  "experience": [
+    {
+      "role": "Senior Software Developer",
+      "company": "Polestar Analytics",
+      "period": "Nov 2023 – Present",
+      "highlights": [
+        "Led FinOps micro-frontend systems for ETL cost monitoring using Redis, cron jobs, and WebSockets.",
+        "Applied LLM-based agentic models to optimize notebook code, reducing operational costs by ~40%.",
+        "Built monitoring and log analysis workflows with real-time infrastructure dashboards.",
+        "Built interactive lineage visualization across Azure Data Factory and Databricks workflows.",
+        "Developed 5+ enterprise ETL modules on Microsoft Fabric, improving integration efficiency by ~80%.",
+        "Engineered role-based product tracking interfaces, reducing lifecycle errors and manual effort by ~60%.",
+        "Led frontend for Bayer Crops Sales Planning Tool (100+ regional initiatives) with React, Redux, TypeScript.",
+        "Implemented PWA offline sync with IndexedDB and Redux (~30% sync efficiency gain).",
+        "Created real-time analytics dashboards from 8+ Excel sources (~50% less manual reporting).",
+        "Presented AI solutions at Microsoft AI Tour NYC (2025) and London AI Tour with Jarvis."
+      ]
+    },
+    {
+      "role": "Software Developer",
+      "company": "Tech Analogy",
+      "period": "Jul 2021 – Jul 2022",
+      "highlights": [
+        "Delivered 4+ production apps with React.js, Next.js, and Tailwind CSS.",
+        "Mentored 4 developers; improved UI/UX and user engagement by ~20%.",
+        "Resolved 24+ critical production issues pre-release (~60% fewer post-release defects)."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Cricketer's App",
+      "description": "TypeScript player directory with advanced filtering, recommendations, and responsive UI.",
+      "demoUrl": null,
+      "repoUrl": null
+    },
+    {
+      "name": "E-commerce Template",
+      "description": "Modular e-commerce frontend with React, TypeScript, and reusable UI components.",
+      "demoUrl": null,
+      "repoUrl": null
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "school": "Delhi Technological University",
+      "period": "2019 – 2023",
+      "detail": "CGPA: 8.34"
+    }
+  ],
+  "skills": {
+    "frontend": ["React.js", "Next.js", "TypeScript", "JavaScript", "Redux", "Tailwind CSS", "HTML5", "CSS3", "PWA", "IndexedDB"],
+    "backend": ["Node.js", "Express.js", "REST APIs", "WebSockets", "Microservices", "Cron Jobs"],
+    "languages": ["JavaScript", "TypeScript", "Python", "C++", "Java", "SQL"],
+    "databases": ["MySQL", "PostgreSQL", "Redis"],
+    "cloud": ["Azure", "Docker", "Microsoft Fabric", "Azure Data Factory", "Azure Databricks", "ETL Pipelines"],
+    "other": ["Git", "Docker", "CI/CD", "Agile", "System Design", "Distributed Systems", "AI Tools", "Leadership"]
+  },
+  "achievements": [
+    "Multiple performance awards at Polestar Analytics.",
+    "Project Delivery Excellence Award for Data Nexus initiative.",
+    "Runner-up (Silver) Code Gladiators 2022 and 2023.",
+    "CodeChef Global Rank 17; GFG Institute Leaderboard Rank 2."
+  ]
+}

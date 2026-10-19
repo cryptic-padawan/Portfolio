@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --arcane-bg: #0f1224;
+  --arcane-panel: rgba(20, 24, 48, 0.82);
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: var(--arcane-bg);
+  color: #e8eaf6;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.glass-panel {
+  background: var(--arcane-panel);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  border-radius: 0.75rem;
+}

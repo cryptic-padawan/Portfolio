@@ -10,6 +10,7 @@
     "dev:clean": "node scripts/start-dev.mjs",
     "build": "npm run build -w @arcanum/web",
     "start": "npm run start -w @arcanum/web",
+    "preview": "npm run build && npm run start",
     "lint": "npm run lint -w @arcanum/web",
     "redis:up": "docker compose up -d redis",
     "redis:down": "docker compose down",
